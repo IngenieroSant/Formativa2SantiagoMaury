@@ -1,11 +1,16 @@
 <resources>
+    <!-- Nombre de la App -->
     <string name="app_name">Formativa2SantiagoMaury</string>
+
+    <!-- Pantalla de Bienvenida -->
     <string name="bienvenida_titulo">Hola, bienvenido</string>
-    <string name="bienvenida_descripcion">Esta aplicación permite trabajar con la serie Fibonacci, resolver ecuaciones cuadráticas y ordenar datos.</string>
+    <string name="bienvenida_descripcion">
+        Esta aplicación permite trabajar con la serie Fibonacci, resolver ecuaciones cuadráticas y ordenar datos.
+    </string>
     <string name="hint_ingresa_nombre">Ingresa tu nombre</string>
     <string name="btn_continuar">Continuar</string>
 
-    <!-- Actividad Principal (MainActivity) -->
+    <!-- Actividad Principal -->
     <string name="titulo_principal">¿Qué deseas hacer?</string>
     <string name="btn_fibonacci">Fibonacci</string>
     <string name="btn_ecuacion">Ecuación Cuadrática</string>
@@ -17,7 +22,7 @@
     <string name="btn_generar_fibonacci">Generar</string>
     <string name="resultado_fibonacci">Resultado:</string>
 
-    <!-- Actividad Ecuación -->
+    <!-- Actividad Ecuación Cuadrática -->
     <string name="titulo_ecuacion">Ecuación Cuadrática</string>
     <string name="hint_valor_a">Ingrese el valor de a</string>
     <string name="hint_valor_b">Ingrese el valor de b</string>
@@ -31,6 +36,17 @@
     <string name="btn_ordenar_asc">Ordenar Ascendente</string>
     <string name="btn_ordenar_desc">Ordenar Descendente</string>
     <string name="resultado_ordenar">Resultado:</string>
+
+    <!-- Puzzle / Estadísticas -->
+    <string name="btn_reiniciar_juego">Reiniciar Juego</string>
+    <string name="btn_ver_estadisticas">Ver Estadísticas</string>
+    <string name="btn_reiniciar_estadisticas">Reiniciar Estadísticas</string>
+    <string name="ganaste_texto">¡Ganaste!</string>
+
+    <!-- Botón de música -->
+    <string name="btn_musica_activar">🔊</string>
+    <string name="btn_musica_desactivar">🔇</string>
+    <string name="descripcion_boton_musica">Botón para activar o desactivar sonido</string>
 
     <!-- Otros -->
     <string name="imagen_descriptiva">Imagen decorativa</string>

@@ -18,7 +18,7 @@ public class PuzzleActivity extends AppCompatActivity {
     private GridLayout gridPuzzle;
     private TextView tvGanaste;
     private TextView tvEstadisticas;
-    private Button btnReiniciar, btnVerEstadisticas, btnReiniciarEstadisticas;
+    private Button btnReiniciar, btnVerEstadisticas, btnReiniciarEstadisticas, btnMusica;
     private ArrayList<Button> botones = new ArrayList<>();
     private ArrayList<String> numeros;
 
@@ -34,6 +34,7 @@ public class PuzzleActivity extends AppCompatActivity {
     private int victorias;
     private int derrotas;
 
+    private boolean musicaActiva = true;
     private boolean estadisticasVisibles = false;
 
     @Override
@@ -47,6 +48,7 @@ public class PuzzleActivity extends AppCompatActivity {
         btnReiniciar = findViewById(R.id.btnReiniciar);
         btnVerEstadisticas = findViewById(R.id.btnVerEstadisticas);
         btnReiniciarEstadisticas = findViewById(R.id.btnReiniciarEstadisticas);
+        btnMusica = findViewById(R.id.btnMusica);
 
         prefs = getSharedPreferences("puzzle_stats", MODE_PRIVATE);
         recordMovimientos = prefs.getInt("record", 0);
@@ -88,6 +90,22 @@ public class PuzzleActivity extends AppCompatActivity {
             tvEstadisticas.setVisibility(View.GONE);
             btnVerEstadisticas.setText("Ver Estadísticas");
             estadisticasVisibles = false;
+        });
+
+        // BOTÓN DE MÚSICA
+        btnMusica.setOnClickListener(v -> {
+            reproducirSonidoTouch();
+            if (musicaFondo != null) {
+                if (musicaFondo.isPlaying()) {
+                    musicaFondo.pause();
+                    btnMusica.setText("🔇");
+                    musicaActiva = false;
+                } else {
+                    musicaFondo.start();
+                    btnMusica.setText("🔊");
+                    musicaActiva = true;
+                }
+            }
         });
     }
 
@@ -222,15 +240,16 @@ public class PuzzleActivity extends AppCompatActivity {
         super.onPause();
         if (musicaFondo != null && musicaFondo.isPlaying()) {
             musicaFondo.pause();
+            if (btnMusica != null) btnMusica.setText("🔇");
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (musicaFondo != null && !musicaFondo.isPlaying()) {
+        if (musicaFondo != null && musicaActiva && !musicaFondo.isPlaying()) {
             musicaFondo.start();
+            if (btnMusica != null) btnMusica.setText("🔊");
         }
     }
 }
-
