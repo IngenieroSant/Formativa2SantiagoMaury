@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Formativa2SantiagoMaury</string>
+    <string name="bienvenida_titulo">Hola, bienvenido</string>
+    <string name="bienvenida_descripcion">Esta aplicación permite trabajar con la serie Fibonacci, resolver ecuaciones cuadráticas y ordenar datos.</string>
+    <string name="hint_ingresa_nombre">Ingresa tu nombre</string>
+    <string name="btn_continuar">Continuar</string>
+
+    <!-- Actividad Principal (MainActivity) -->
+    <string name="titulo_principal">¿Qué deseas hacer?</string>
+    <string name="btn_fibonacci">Fibonacci</string>
+    <string name="btn_ecuacion">Ecuación Cuadrática</string>
+    <string name="btn_ordenar">Ordenar Datos</string>
+
+    <!-- Actividad Fibonacci -->
+    <string name="titulo_fibonacci">Serie Fibonacci</string>
+    <string name="hint_num_elementos">Número de elementos</string>
+    <string name="btn_generar_fibonacci">Generar</string>
+    <string name="resultado_fibonacci">Resultado:</string>
+
+    <!-- Actividad Ecuación -->
+    <string name="titulo_ecuacion">Ecuación Cuadrática</string>
+    <string name="hint_valor_a">Ingrese el valor de a</string>
+    <string name="hint_valor_b">Ingrese el valor de b</string>
+    <string name="hint_valor_c">Ingrese el valor de c</string>
+    <string name="btn_calcular_ecuacion">Calcular</string>
+    <string name="resultado_ecuacion">Raíces:</string>
+
+    <!-- Actividad Ordenar Datos -->
+    <string name="titulo_ordenar">Ordenar Datos</string>
+    <string name="hint_lista_numeros">Escriba los números separados por comas</string>
+    <string name="btn_ordenar_asc">Ordenar Ascendente</string>
+    <string name="btn_ordenar_desc">Ordenar Descendente</string>
+    <string name="resultado_ordenar">Resultado:</string>
+
+    <!-- Otros -->
+    <string name="imagen_descriptiva">Imagen decorativa</string>
+</resources>
